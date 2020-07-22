@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: "Kafka production"
+    openshift.io/display-name: "Kafka demo Production"
+  name: kafka-prod

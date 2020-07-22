@@ -1,0 +1,7 @@
+# Create Base Kafka 
+
+oc apply -k /Users/msauve/demo/gitops/kafka-demo/argocd/overlays/default/kustomization.yaml
+
+
+# Remove a port
+oc apply -k manifests/app/base

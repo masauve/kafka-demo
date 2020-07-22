@@ -1,0 +1,5 @@
+mvn exec:java -Dexec.mainClass="io.apicurio.registry.demo.Main" -Dbootstrap.servers=a55408aada7374ac495c66b952846123-771906765.ca-central-1.elb.amazonaws.com:9094 -Dregistry.url.1=http://registry-reg.apps.dev.myocp.n
+
+
+bin/kafka-console-consumer.sh --bootstrap-server \
+  my-cluster-kafka-bootstrap.reg:9092 --topic input-topic --from-beginning 

@@ -1,0 +1,14 @@
+# oc policy add-role-to-user view system:serviceaccount:monitoring:prometheus-k8s -n kafka-dev
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: prometheus-kafka-dev-view
+  namespace: kafka-dev
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: view
+subjects:
+- kind: ServiceAccount
+  name: prometheus-k8s
+  namespace: monitoring
